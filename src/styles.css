@@ -4,15 +4,46 @@
     font-family: 'Games', sans-serif;                                               
 }
 
+.flex {
+    display: flex;
+}
+
+.center {
+   justify-content: center;
+   align-content: center;
+}
+
+.header {
+    margin: 70px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
 .logo {
     width: 100px;
     height: 100px;
     border-radius: 100%;
     background: black;
+    margin-right: 50px;
 }
 
 .logo img {
     width: 100%;
     height: 100%;
     border-radius: 100%;
+}
+
+.nav-item {
+    margin: 15px;
+}
+
+.footer {
+    position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
 }
