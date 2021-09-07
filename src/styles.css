@@ -27,6 +27,9 @@ body {
 ul {
     list-style: none;
     margin-top: 15px;
+    color: #e2b404;
+    text-shadow: 5px 5px black;
+    font-size: 30px;
 }
 
 .logo {
@@ -52,4 +55,10 @@ ul {
     letter-spacing: 3px;
     margin: 50px;
     opacity: 0.89;
+    background-color: #eac21d;
+}
+
+.card-img-top {
+    width: 150px;
+    align-self: center;
 }
