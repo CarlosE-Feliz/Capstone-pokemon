@@ -1,32 +1,35 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Pokemon Solid', sans-serif;                                
+  margin: 0;
+  padding: 0;
+  font-family: 'Pokemon Solid', sans-serif;
 }
 
 body {
-    background-image: url(../media/pokemon-party.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex-direction: column;
+  background-image: url(../media/pokemon-party.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .center {
-   justify-content: center;
-   align-content: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .header {
-    margin: 70px;
+  margin: 70px;
 }
 
 ul {
-    list-style: none;
-    margin-top: 15px;
+  list-style: none;
+  margin-top: 15px;
+  color: #e2b404;
+  text-shadow: 5px 5px black;
+  font-size: 30px;
 }
 
 .logo {
@@ -35,21 +38,27 @@ ul {
 }
 
 .logo img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .nav-item {
-    margin: 15px;
+  margin: 15px;
 }
 
 .footer {
-   height:30px;
-   margin: 15px;
+  height: 30px;
+  margin: 15px;
 }
 
 .card {
-    letter-spacing: 3px;
-    margin: 50px;
-    opacity: 0.89;
+  letter-spacing: 3px;
+  margin: 50px;
+  opacity: 0.89;
+  background-color: #eac21d;
+}
+
+.card-img-top {
+  width: 150px;
+  align-self: center;
 }

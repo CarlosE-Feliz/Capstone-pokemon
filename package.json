@@ -1,5 +1,5 @@
 {
-  "name": "Capstone-Brawl-Stars",
+  "name": "Capstone-pokemon",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xJokeer/Capstone-Brawl-Stars.git"
+    "url": "git+https://github.com/xJokeer/Capstone-pokemon.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/xJokeer/Capstone-Brawl-Stars/issues"
+    "url": "https://github.com/xJokeer/Capstone-pokemon/issues"
   },
-  "homepage": "https://github.com/xJokeer/Capstone-Brawl-Stars#readme",
+  "homepage": "https://github.com/xJokeer/Capstone-pokemon#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.2.0",
