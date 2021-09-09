@@ -44,6 +44,9 @@ ul {
 
 .nav-item {
   margin: 15px;
+  font-size: 45px;
+  -webkit-font-smoothing: none;
+  font-family: "pokemon-font", monospace;
 }
 
 .nav-item:hover {

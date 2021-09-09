@@ -1,7 +1,8 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable no-constant-condition */
 import './styles.css';
 // eslint-disable-next-line no-unused-vars
-import { likes, getLikes } from './likes';
+import { likes, getLikes } from './likes.js';
 
 const divDad = document.querySelector('.row1');
 
@@ -14,10 +15,10 @@ function creaPoke(pokemon) {
        + '<div class="card-body">'
           + `<h5 class="card-title">${element.name}</h5>`
           + '<div class="flex text-div">'
-          + `<p class="card-text text" id="like-${element.id}"><a>🤍</a></p>`
-          + '<p class="likes">5</p>'
+          + `<p class="card-text text" id="like-${element.id}">🤍</p>`
+          + '<p class="likes"></p>'
           + '</div>'
-          + `<button class="btn btn-primary" id="btn-${element.id}">Comments</button>`
+          + `<button class="btn btn-primary" id="${element.id}">Comments</button>`
         + '</div>'
      + '</div>'
     + '</div>';
@@ -28,12 +29,14 @@ function creaPoke(pokemon) {
     hearts[i].addEventListener('click', (e) => {
       if (e) hearts[i].innerHTML = '❤️';
       setTimeout(() => {
+        getLikes();
         hearts[i].innerHTML = '🤍';
       }, 1500);
-      likes(i + 1);
+      likes(i);
     });
   }
 }
+getLikes();
 
 async function poke() {
   const counter = 34;
