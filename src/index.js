@@ -6,13 +6,11 @@ import { popup, pokeComment } from './comments.js';
 // eslint-disable-next-line no-unused-vars
 import { likes, getLikes } from './likes.js';
 
-
 const divDad = document.querySelector('.row1');
 
 function creaPoke(pokemon) {
   const newValues = pokemon;
   newValues.forEach((element) => {
-
     divDad.innerHTML += '<div class="col-4 col" >'
     + '<div class="card">'
       + `<img src="${element.sprites.front_default}" class="card-img-top" alt="image" />`
@@ -55,4 +53,3 @@ poke();
 popup();
 pokeComment();
 likes();
-
