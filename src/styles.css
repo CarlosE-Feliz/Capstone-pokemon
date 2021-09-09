@@ -28,7 +28,7 @@ ul {
   list-style: none;
   margin-top: 15px;
   color: #dfbb6a;
-  text-shadow: 0px 4px #474766;
+  text-shadow: 0 4px #474766;
 }
 
 .logo {
@@ -49,7 +49,7 @@ ul {
 }
 
 .nav-item:hover {
-  text-shadow: 0px 4px #e2b404;
+  text-shadow: 0 4px #e2b404;
   color: red;
 }
 
