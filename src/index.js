@@ -1,5 +1,6 @@
 /* eslint-disable no-constant-condition */
 import './styles.css';
+// eslint-disable-next-line no-unused-vars
 import { likes, getLikes } from './likes';
 
 const divDad = document.querySelector('.row1');
