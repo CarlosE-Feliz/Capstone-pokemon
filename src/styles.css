@@ -27,9 +27,8 @@ body {
 ul {
   list-style: none;
   margin-top: 15px;
-  color: #e2b404;
-  text-shadow: 5px 5px black;
-  font-size: 30px;
+  color: #dfbb6a;
+  text-shadow: 0 4px #474766;
 }
 
 .logo {
@@ -50,7 +49,7 @@ ul {
 }
 
 .nav-item:hover {
-  text-shadow: 5px 2px #e2b404;
+  text-shadow: 0 4px #e2b404;
   color: red;
 }
 
