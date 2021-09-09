@@ -1,6 +1,8 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-constant-condition */
 import './styles.css';
+import { popup, pokeComment } from './comments.js';
+
 // eslint-disable-next-line no-unused-vars
 import { likes, getLikes } from './likes.js';
 
@@ -48,4 +50,6 @@ async function poke() {
   }
 }
 poke();
+popup();
+pokeComment();
 likes();
