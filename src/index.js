@@ -25,7 +25,13 @@ function creaPoke(pokemon) {
   });
 
   const hearts = document.querySelectorAll('.card-text');
+  let count = 0;
+  const showitem = [];
   for (let i = 0; i < hearts.length; i += 1) {
+    // eslint-disable-next-line operator-assignment
+    count++;
+    showitem.push(count);
+    document.getElementById('counterItems').innerHTML = `Pokemons (${showitem.length})`;
     hearts[i].addEventListener('click', (e) => {
       if (e) hearts[i].innerHTML = '❤️';
       setTimeout(() => {
