@@ -23,23 +23,25 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Carlos Feliz**
+👤 **Carlos E. Feliz**
 
 - GitHub: [@xJokeer](https://github.com/xJokeer)
 
+## Contributor
+👤 **Laylo Khodjaeva**
+- GitHub: [@Laylo309](https://github.com/Laylo309)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/xJokeer/helloworld/issues).
+Feel free to check the [issues page](https://github.com/xJokeer/Capstone-pokemon/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-- Inspiration by microverse
-
+- [Carlos E. Feliz - @xJoker](https://github.com/xJokeer)
 ## 📝 License
 
 This project is [MIT](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt) licensed.
