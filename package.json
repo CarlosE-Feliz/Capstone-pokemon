@@ -8,7 +8,8 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
+
   },
   "repository": {
     "type": "git",

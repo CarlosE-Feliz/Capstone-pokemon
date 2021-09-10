@@ -1,7 +1,10 @@
 import './commentsStyle.css';
 import { postApiComent, getApiComent } from './apicoment.js';
 
-const popup = (data) => {
+
+const popup = async (data) => {
+
+
   const newData = data;
   document.getElementById('body').addEventListener('click', (e) => {
     newData.forEach((element) => {
@@ -16,7 +19,7 @@ const popup = (data) => {
         <button type="button" class="btn-close" aria-label="Close" id="cancel-button"></button>
          <img src="${element.sprites.front_default}" class="cardImg" alt="image" />
          <div class="card-body">
-         <h5 class="cardTitle">${element.name}</h5>
+         <h4 class="cardTitle">${element.name}</h4>
          <div class="row">
          <div class="w-100"></div>
          <div class="col-6 col-sm-5">Species: ${element.species.name}</div>
@@ -29,9 +32,8 @@ const popup = (data) => {
          <div class="col-6 col-sm-5">Base experience:${element.base_experience}</div>
          </div>
          </div>
-         </div>
+         <h4 id="commentTitle">Comments(0)</h4>
          <div id="comments">
-         <h4 id="commentTitle"></h4>
          <ul id="ulComment"></ul>
          </div>
          <div class="mb-3">
@@ -43,10 +45,11 @@ const popup = (data) => {
          <div class="col-auto">
          <button type="submit" class="btn btn-primary mb-3" id="sendBttn">Submmit</button>
          </div>
+         </div>
          `;
         popupDiv.appendChild(commentDiv);
         getApiComent(element.id);
-        commentDiv.style.display = 'block';
+        commentDiv.style.display = 'flex';
         document.getElementById('body').appendChild(popupDiv);
         const cancelBttn = document.querySelector('#cancel-button');
         cancelBttn.addEventListener('click', () => {
