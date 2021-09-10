@@ -1,10 +1,11 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-constant-condition */
 import './styles.css';
-import { popup, pokeComment } from './comments.js';
-
+import { pokeComment } from './comments.js';
 // eslint-disable-next-line no-unused-vars
 import { likes, getLikes } from './likes.js';
+// eslint-disable-next-line no-unused-vars
+import { getApiComent } from './apicoment.js';
 
 const divDad = document.querySelector('.row1');
 
@@ -18,7 +19,7 @@ function creaPoke(pokemon) {
           + `<h5 class="card-title">${element.name}</h5>`
           + '<div class="flex text-div">'
           + `<p class="card-text text" id="like-${element.id}">🤍</p>`
-          + '<p class="likes"></p>'
+          + '<p class="likes">0</p>'
           + '</div>'
           + `<button class="btn btn-primary" id="${element.id}">Comments</button>`
         + '</div>'
@@ -56,6 +57,5 @@ async function poke() {
   }
 }
 poke();
-popup();
 pokeComment();
-likes();
+// getApiComent();

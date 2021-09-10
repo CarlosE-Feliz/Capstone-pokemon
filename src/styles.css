@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url(../media/pokemon-party.jpg);
+  background-image: url(./media/pokemon-party.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   flex-direction: column;
@@ -27,7 +27,7 @@ body {
 ul {
   list-style: none;
   margin-top: 15px;
-  color: #dfbb6a;
+  color: #ffe683;
   text-shadow: 0 4px #474766;
 }
 
