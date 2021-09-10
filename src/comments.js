@@ -8,14 +8,11 @@ function popup(data) {
     newData.forEach((element) => {
       // eslint-disable-next-line eqeqeq
       if (e.target.id == element.id) {
-        const popupDivBG = document.createElement('div');
         const popupDiv = document.createElement('div');
         const commentDiv = document.createElement('div');
         popupDiv.id = 'overlay-popup';
-        popupDivBG.id = 'overlay-popup-bg';
         commentDiv.id = 'overlay-project';
         commentDiv.style.display = 'flex';
-        popupDivBG.style.display = 'flex';
         commentDiv.innerHTML = `<div class="cardItem">
         <button type="button" class="btn-close" aria-label="Close" id="cancel-button"></button>
          <img src="${element.sprites.front_default}" class="cardImg" alt="image" />
@@ -34,6 +31,10 @@ function popup(data) {
          </div>
          </div>
          </div>
+         <div id="comments">
+         <h4 id="commentTitle"></h4>
+         <ul id="ulComment"></ul>
+         </div>
          <div class="mb-3">
          <input type="text" class="form-control" id="fromName" placeholder="Name">
          </div>
@@ -45,6 +46,7 @@ function popup(data) {
          </div>
          `;
         popupDiv.appendChild(commentDiv);
+        getApiComent(element.id);
         commentDiv.style.display = 'block';
         document.getElementById('body').appendChild(popupDiv);
         const cancelBttn = document.querySelector('#cancel-button');
@@ -59,10 +61,8 @@ function popup(data) {
           e.preventDefault();
           const name = document.getElementById('fromName');
           const areaT = document.getElementById('fromTextArea');
-          postApiComent(id, name.value, areaT.value);
-          setTimeout(() => {
-            getApiComent(id);
-          }, 1500);
+          postApiComent(id, name.value, areaT.value)
+            .then(() => getApiComent(id));
         });
       }
     });

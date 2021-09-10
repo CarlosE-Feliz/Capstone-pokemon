@@ -1,5 +1,5 @@
 const postApiComent = async (id, user, userC) => {
-  fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/f7dXkqNplQRlTHeNNpht/comments', {
+  const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/f7dXkqNplQRlTHeNNpht/comments', {
     method: 'POST',
     body: JSON.stringify({
       item_id: id,
@@ -10,8 +10,8 @@ const postApiComent = async (id, user, userC) => {
       'Content-type': 'application/json',
 
     },
-  })
-    .then((response) => response);
+  });
+  return res;
 };
 
 const getApiComent = (id) => {
@@ -22,7 +22,17 @@ const getApiComent = (id) => {
     },
   })
     .then((response) => response.json())
-    .then((json) => console.log(json));
+    .then((data) => {
+      const ul = document.getElementById('ulComment');
+      const title = document.getElementById('commentTitle');
+      ul.innerHTML = '';
+      if (data || ul) {
+        data.forEach((element, i) => {
+          title.innerHTML = `Comments(${i + 1})`;
+          ul.innerHTML += `<li>${element.creation_date} ${element.username}  ${element.comment}</li>`;
+        });
+      }
+    });
 };
 
 // eslint-disable-next-line import/prefer-default-export
