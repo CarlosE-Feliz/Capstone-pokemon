@@ -1,5 +1,5 @@
 const postApiComent = async (id, user, userC) => {
-  const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/f7dXkqNplQRlTHeNNpht/comments', {
+  const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Jtewq4Jctkesw5RmCcn2/comments', {
     method: 'POST',
     body: JSON.stringify({
       item_id: id,
@@ -15,7 +15,7 @@ const postApiComent = async (id, user, userC) => {
 };
 
 const getApiComent = (id) => {
-  fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/f7dXkqNplQRlTHeNNpht/comments?item_id=${id}`, {
+  fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Jtewq4Jctkesw5RmCcn2/comments?item_id=${id}`, {
     headers: {
       'Content-type': 'application/json',
 

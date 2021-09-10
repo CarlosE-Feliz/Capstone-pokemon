@@ -1,4 +1,4 @@
-const API_LIKES = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/f7dXkqNplQRlTHeNNpht/likes';
+const API_LIKES = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/WEhRfKpCJNPVNbGAEcXk/likes';
 const likes = async (id) => {
   await fetch(API_LIKES, {
     method: 'POST',
