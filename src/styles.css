@@ -31,6 +31,17 @@ ul {
   text-shadow: 0 4px #474766;
 }
 
+.honors {
+  color: #ffe683;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.honors a {
+  text-decoration: none;
+  color: yellow;
+}
+
 .logo {
   width: 250px;
   opacity: 0.89;
@@ -51,11 +62,6 @@ ul {
 .nav-item:hover {
   text-shadow: 0 4px #e2b404;
   color: red;
-}
-
-.footer {
-  height: 30px;
-  margin: 15px;
 }
 
 .card {

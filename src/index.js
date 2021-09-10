@@ -1,11 +1,6 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable no-constant-condition */
 import './styles.css';
 import { pokeComment } from './comments.js';
-// eslint-disable-next-line no-unused-vars
 import { likes, getLikes } from './likes.js';
-// eslint-disable-next-line no-unused-vars
-import { getApiComent } from './apicoment.js';
 
 const divDad = document.querySelector('.row1');
 
@@ -31,8 +26,7 @@ function creaPoke(pokemon) {
   let count = 0;
   const showitem = [];
   for (let i = 0; i < hearts.length; i += 1) {
-    // eslint-disable-next-line operator-assignment
-    count++;
+    count += 1;
     showitem.push(count);
     document.getElementById('counterItems').innerHTML = `Pokemons (${showitem.length})`;
     hearts[i].addEventListener('click', (e) => {
@@ -58,4 +52,3 @@ async function poke() {
 }
 poke();
 pokeComment();
-// getApiComent();

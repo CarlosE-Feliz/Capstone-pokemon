@@ -1,47 +1,52 @@
 #overlay-popup-bg {
-  position: fixed;
-  display: none;
   background: #e2b404;
   opacity: 0.9;
   opacity: 0.1;
   z-index: 1;
   cursor: pointer;
+  
+}
+#overlay-project {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
 }
 
+#comments {
+  width: 250px;
+  height: 150px;
+  overflow-y: scroll;
+}
 #overlay-popup {
-  position: fixed;
-  background: #e2b404;
-  border-radius: 20px;
-  z-index: 2;
-  left: 0;
-  right: 0;
-  top: 40px;
-  bottom: 5rem;
-  margin-left: 15rem;
-  margin-right: 15rem;
-  opacity: 0.98;
+ position: fixed;
+  background: rgba(250, 53, 4, 0.788);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  justify-items: center;
+  align-items: center;
+  display: flex;
 }
 
 .cardItem {
-  top: 2rem;
-  bottom: 5rem;
-  margin-left: 15rem;
-  margin-right: 5rem;
+  background: rgba(128, 255, 0, 0.836);
+  justify-self: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 98%;
 }
 
 .cardImg {
-  width: 250px;
+  width: 20%;
   display: flex;
-  margin-left: 10rem;
-  margin-bottom: 1rem;
-}
-
-.cardTitle {
-  padding-bottom: 2rem;
-  padding-left: 15rem;
 }
 
 #cancel-button {
-  margin-left: 46rem;
-  margin-top: 20px;
+  position: absolute;
+  right: 24px;
+  top: 27px;
 }
