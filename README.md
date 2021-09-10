@@ -10,6 +10,8 @@
 - JavaScript
 - Jest
 
+## Demo version
+[Demo](https://xjokeer.github.io/Capstone-pokemon/)
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
