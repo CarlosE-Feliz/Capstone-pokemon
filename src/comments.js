@@ -1,4 +1,5 @@
 import './commentsStyle.css';
+import { postApiComent, getApiComent } from './apicoment.js';
 
 function popup(data) {
   // const commentsBttn = document.querySelectorAll('.btn');
@@ -22,17 +23,27 @@ function popup(data) {
          <h5 class="cardTitle">${element.name}</h5>
          <div class="row">
          <div class="w-100"></div>
-  <div class="col-6 col-sm-5">Species: ${element.species.name}</div>
-  <div class="col-6 col-sm-5">Abilities: ${element.abilities[0].ability.name}, ${element.abilities[1].ability.name}</div>
-
-  <!-- Force next columns to break to new line -->
-  <div class="w-100"></div>
-
-  <div class="col-6 col-sm-5">Moves:${element.moves[0].move.name}, ${element.moves[1].move.name}</div>
-  <div class="col-6 col-sm-5">Base experience:${element.base_experience}</div>
-</div>
+         <div class="col-6 col-sm-5">Species: ${element.species.name}</div>
+         <div class="col-6 col-sm-5">Abilities: ${element.abilities[0].ability.name}, ${element.abilities[1].ability.name}</div>
+             
+         <!-- Force next columns to break to new line -->
+         <div class="w-100"></div>
+             
+         <div class="col-6 col-sm-5">Moves:${element.moves[0].move.name}, ${element.moves[1].move.name}</div>
+         <div class="col-6 col-sm-5">Base experience:${element.base_experience}</div>
          </div>
-         </div> `;
+         </div>
+         </div>
+         <div class="mb-3">
+         <input type="text" class="form-control" id="fromName" placeholder="Name">
+         </div>
+         <div class="mb-3">
+         <textarea class="form-control" id="fromTextArea" placeholder="Comment" rows="3"></textarea>
+         </div> 
+         <div class="col-auto">
+         <button type="submit" class="btn btn-primary mb-3" id="sendBttn">Submmit</button>
+         </div>
+         `;
         popupDiv.appendChild(commentDiv);
         commentDiv.style.display = 'block';
         document.getElementById('body').appendChild(popupDiv);
@@ -40,6 +51,18 @@ function popup(data) {
         cancelBttn.addEventListener('click', () => {
           commentDiv.remove();
           popupDiv.remove();
+        });
+        const btn = document.getElementById('sendBttn');
+        btn.addEventListener('click', (e) => {
+          // eslint-disable-next-line prefer-destructuring
+          const id = element.id;
+          e.preventDefault();
+          const name = document.getElementById('fromName');
+          const areaT = document.getElementById('fromTextArea');
+          postApiComent(id, name.value, areaT.value);
+          setTimeout(() => {
+            getApiComent(id);
+          }, 1500);
         });
       }
     });
