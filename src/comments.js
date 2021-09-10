@@ -1,7 +1,10 @@
 import './commentsStyle.css';
 import { postApiComent, getApiComent } from './apicoment.js';
 
+
 const popup = async (data) => {
+
+
   const newData = data;
   document.getElementById('body').addEventListener('click', (e) => {
     newData.forEach((element) => {
@@ -55,8 +58,7 @@ const popup = async (data) => {
         });
         const btn = document.getElementById('sendBttn');
         btn.addEventListener('click', (e) => {
-          // eslint-disable-next-line prefer-destructuring
-          const id = element.id;
+          const { id } = element;
           e.preventDefault();
           const name = document.getElementById('fromName');
           const areaT = document.getElementById('fromTextArea');
