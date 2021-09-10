@@ -4,8 +4,8 @@
   opacity: 0.1;
   z-index: 1;
   cursor: pointer;
-  
 }
+
 #overlay-project {
   width: 100%;
   flex-direction: column;
@@ -19,8 +19,9 @@
   height: 150px;
   overflow-y: scroll;
 }
+
 #overlay-popup {
- position: fixed;
+  position: fixed;
   background: rgba(250, 53, 4, 0.788);
   width: 100%;
   height: 100%;
