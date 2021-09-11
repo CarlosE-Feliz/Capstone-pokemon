@@ -1,0 +1,53 @@
+#overlay-popup-bg {
+  background: #e2b404;
+  opacity: 0.9;
+  opacity: 0.1;
+  z-index: 1;
+  cursor: pointer;
+}
+
+#overlay-project {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+#comments {
+  width: 250px;
+  height: 150px;
+  overflow-y: scroll;
+}
+
+#overlay-popup {
+  position: fixed;
+  background: rgba(250, 53, 4, 0.788);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  justify-items: center;
+  align-items: center;
+  display: flex;
+}
+
+.cardItem {
+  background: rgba(128, 255, 0, 0.836);
+  justify-self: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 98%;
+}
+
+.cardImg {
+  width: 20%;
+  display: flex;
+}
+
+#cancel-button {
+  position: absolute;
+  right: 24px;
+  top: 27px;
+}
