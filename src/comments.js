@@ -14,20 +14,15 @@ const popup = async (data) => {
         commentDiv.style.display = 'flex';
         commentDiv.innerHTML = `<div class="cardItem">
         <button type="button" class="btn-close" aria-label="Close" id="cancel-button"></button>
+        <h4 class="cardTitle">${element.name}</h4>
          <img src="${element.sprites.front_default}" class="cardImg" alt="image" />
-         <div class="card-body">
-         <h4 class="cardTitle">${element.name}</h4>
-         <div class="row">
-         <div class="w-100"></div>
-         <div class="col-6 col-sm-5">Species: ${element.species.name}</div>
-         <div class="col-6 col-sm-5">Abilities: ${element.abilities[0].ability.name}, ${element.abilities[1].ability.name}</div>
-             
-         <!-- Force next columns to break to new line -->
-         <div class="w-100"></div>
-             
-         <div class="col-6 col-sm-5">Moves:${element.moves[0].move.name}, ${element.moves[1].move.name}</div>
-         <div class="col-6 col-sm-5">Base experience:${element.base_experience}</div>
-         </div>
+         <div class="card-body info">
+         <ul class="ul-popup">
+            <li class="abilities"> Abilities: ${element.abilities[0].ability.name}, ${element.abilities[1].ability.name}</li>
+         </ul>
+         <ul class="ul-popup">
+            <li class="moves"> Moves: ${element.moves[0].move.name}, ${element.moves[1].move.name}</li>
+         </ul>
          </div>
          <h4 id="commentTitle">Comments(0)</h4>
          <div id="comments">
@@ -41,6 +36,7 @@ const popup = async (data) => {
          </div> 
          <div class="col-auto">
          <button type="submit" class="btn btn-primary mb-3" id="sendBttn">Submmit</button>
+         </div>
          </div>
          </div>
          `;
