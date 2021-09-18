@@ -35,5 +35,4 @@ const getApiComent = (id) => {
     });
 };
 
-// eslint-disable-next-line import/prefer-default-export
 export { postApiComent, getApiComent };

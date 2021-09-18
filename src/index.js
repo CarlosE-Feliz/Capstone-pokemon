@@ -4,22 +4,23 @@ import { likes, getLikes } from './likes.js';
 
 const divDad = document.querySelector('.row1');
 
-function creaPoke(pokemon) {
+const creaPoke = (pokemon) => {
   const newValues = pokemon;
   newValues.forEach((element) => {
-    divDad.innerHTML += '<div class="col-4 col" >'
-    + '<div class="card">'
+    divDad.innerHTML
+      += '<div class="col-4 col" >'
+      + '<div class="card">'
       + `<img src="${element.sprites.front_default}" class="card-img-top" alt="image" />`
-       + '<div class="card-body">'
-          + `<h5 class="card-title">${element.name}</h5>`
-          + '<div class="flex text-div">'
-          + `<p class="card-text text" id="like-${element.id}">🤍</p>`
-          + '<p class="likes">0</p>'
-          + '</div>'
-          + `<button class="btn btn-primary" id="${element.id}">Comments</button>`
-        + '</div>'
-     + '</div>'
-    + '</div>';
+      + '<div class="card-body">'
+      + `<h5 class="card-title">${element.name}</h5>`
+      + '<div class="flex text-div">'
+      + `<p class="card-text text" id="like-${element.id}">🤍</p>`
+      + '<p class="likes">0</p>'
+      + '</div>'
+      + `<button class="btn btn-primary" id="${element.id}">Comments</button>`
+      + '</div>'
+      + '</div>'
+      + '</div>';
   });
 
   const hearts = document.querySelectorAll('.card-text');
@@ -28,7 +29,9 @@ function creaPoke(pokemon) {
   for (let i = 0; i < hearts.length; i += 1) {
     count += 1;
     showitem.push(count);
-    document.getElementById('counterItems').innerHTML = `Pokemons (${showitem.length})`;
+    document.getElementById(
+      'counterItems',
+    ).innerHTML = `Pokemons (${showitem.length})`;
     hearts[i].addEventListener('click', (e) => {
       if (e) hearts[i].innerHTML = '❤️';
       setTimeout(() => {
@@ -38,7 +41,7 @@ function creaPoke(pokemon) {
       likes(i);
     });
   }
-}
+};
 getLikes();
 
 async function poke() {
